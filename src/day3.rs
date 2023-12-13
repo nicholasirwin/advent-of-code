@@ -89,7 +89,6 @@ pub fn p2(filename: &str) -> i32 {
 
         let mut grid = vec![vec!['_'; x_size]; y_size];
 
-        // map every gear loc to vec of adj parts,
         let mut gears = vec![];
 
         for (y_inv, line) in contents.lines().enumerate() {
@@ -149,7 +148,6 @@ pub fn p2(filename: &str) -> i32 {
                         {
                             let char_at_new_loc = grid[new_loc.1 as usize][new_loc.0 as usize];
                             if char_at_new_loc == '*' {
-                                // adj_gears.push(&new_loc);
                                 adj_gears.push((new_loc.0, new_loc.1));
                             }
                         }
