@@ -18,12 +18,9 @@ class Problem:
     @property
     def sim_score(self) -> int:
         l2_freq_map = Problem.get_freq_map(self.l2)
-
         score = 0
         for x in self.l1:
-            freq_in_l2 = l2_freq_map[x]
-            score += x * freq_in_l2
-
+            score += x * l2_freq_map[x]
         return score
 
     @staticmethod
